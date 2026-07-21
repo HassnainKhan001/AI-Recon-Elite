@@ -1,45 +1,58 @@
-# AI Recon Elite
 
-## Mission
-A professional, structured reconnaissance framework for AI infrastructure (OpenAI, Anthropic, Hugging Face, Google, Groq). This repository follows the **13 Pillars of Recon 2026** and contains **only OSINT, secret hunting, and external attack surface mapping**. No exploitation, no jailbreaks—pure reconnaissance.
+---
 
-## The 13 Pillars
+## 🔥 Core Findings (Live Aggregator)
 
-| #  | Category | Tools | Status |
-|----|----------|-------|--------|
-| 1  | Subdomain Enumeration | HaXder, BBOT, Scion, Subfinder, Amass | Active |
-| 2  | Cloud Bucket Hunting | s3dns, cloud.sh, S3Scanner, Gobuster | Active |
-| 3  | Service Fingerprinting | AIMap, KBF, httpx, curl, Burp | Active |
-| 4  | Container Registry | layerleak, skopeo, docker pull, grep | Active |
-| 5  | Metadata SSRF | Custom Python, Azure-Metadata-Enumerator | Active |
-| 6  | Google Dorks | GhostLink, DorkGPT, AtDork | Active |
-| 7  | Shodan / Censys | Shodan, Censys, OSINT MCP Server | Active |
-| 8  | GitHub OSINT | Keychase, pleno-dlp, Gitleaks | Active |
-| 9  | Deep Web OSINT | IntelX, Fivecast ONYX | Active |
-| 10 | Dark Web OSINT | Robin, OnionClaw, OpenTor | Active |
-| 11 | Dark Web Search | Ahmia, Torch, Haystak | Active |
-| 12 | Leak & Breach Intel | HIBP, DeHashed, LeakOSINT | Active |
-| 13 | Specialized Engines | crt.sh, SecurityTrails, uncover | Active |
+*This section links to the structured folders above. All future findings will be appended inside the respective pillar's `findings.md` file, keeping this README untouched.*
 
-## Findings (Real-World Discoveries)
+| Pillar | High-Value Discovery | Status |
+| :--- | :--- | :--- |
+| **06 (Dorks)** | OpenAI `sk-proj-...` Key | 🔴 Reported |
+| **06 (Dorks)** | Anthropic `sk-ant-...` Key (Issue #6) | 🟡 Acknowledged |
+| **06 (Dorks)** | Groq `gsk_...` API Key (HF Space) | 🔴 Active |
+| **06 (Dorks)** | PostgreSQL `postgres://...` Default Creds | 🟠 Pending |
+| **08 (GitHub)** | AI Infrastructure Blueprint (Supply Chain) | 🔵 Informational |
 
-| Target | Secret Found | Status |
-|--------|-------------|--------|
-| OpenAI (Janhvi-Gangurde) | `sk-proj-...` API Key | Reported |
-| Anthropic (raya-ac) | `sk-ant-...` API Key | Acknowledged |
-| Groq (Hugging Face Space) | `gsk_...` API Key | Active |
-| PostgreSQL (lingxi-core) | `postgres://...` Creds | Pending |
-| AI Infrastructure | Blueprint Exposure | Informational |
+*(For detailed impact, remediation, and screenshots, refer to the specific pillar folders).*
 
-## Tools & Scripts
-- `scripts/dork_runner.py` — CLI utility to generate and open Google Dorks.
+---
 
-## Methodology
-- **Passive:** Google Dorks, GitHub OSINT, crt.sh, SecurityTrails.
-- **Active:** Shodan, Censys, cloud.sh, layerleak.
-- **Elite:** AIMap, OSINT MCP Server, OnionClaw.
+## 🛠️ Arsenal: Tool Stack (2026 Updates)
 
-## Next Steps
-- [ ] Complete all 13 pillars.
-- [ ] Automate daily reconnaissance.
-- [ ] Integrate with AI agents for continuous monitoring.
+| Tool | Version/Note | Primary Use |
+| :--- | :--- | :--- |
+| **HaXder** | Async Recon | Subdomains + Cloud Storage in one sweep. |
+| **BBOT** | Recursive Scanner | 20-50% more subdomains than traditional tools. |
+| **AIMap** | AI Infrastructure | Fingerprints MCP, vLLM, Ollama, LangServe. |
+| **layerleak** | OCI Registry | Scans any Docker Hub, GHCR, Quay, ECR, GCR. |
+| **OSINT MCP Server** | Unified 37-in-1 | Shodan + Censys + VirusTotal + SecurityTrails. |
+| **Robin** | AI OSINT | LLM-powered dark web query refinement. |
+| **Keychase** | 78 Detectors | Zero-config GitHub secret scanning. |
+
+---
+
+## 📝 Professional Usage Disclaimer
+
+> **This repository is strictly for educational purposes and authorized bug bounty/reconnaissance engagements.**  
+> *Do not scan, probe, or test systems you do not own or lack explicit written permission to test. Unauthorized access is illegal.*
+
+---
+
+## 🚀 Next Steps (For the User)
+
+1.  [ ] Complete **Passive OSINT** (Pillars 1, 6, 8, 13).
+2.  [ ] Move to **Active Recon** (Pillars 2, 3, 4, 5, 7).
+3.  [ ] Finish with **Deep/Dark Web** (Pillars 9, 10, 11, 12).
+4.  [ ] Aggregate all findings into the `findings/master-log.md` file.
+
+---
+
+## 🔗 Quick Links
+
+- **GitHub Home:** []
+- **Bug Bounty Profiles:** [HackerOne / Bugcrowd]
+- **Last Updated:** July 2026
+
+---
+
+*"Recon isn't about finding everything. It's about finding the *right* thing that everyone else missed."*
