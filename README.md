@@ -69,7 +69,8 @@ To keep this README **permanently static**:
 
 ## 🔗 Quick Links
 
-- **GitHub Home:** [Your Profile URL]
+- **GitHub Home:** [https://github.com/HassnainKhan001]
+-  **Linkdln Home:** [https://www.linkedin.com/in/muhammad-hasnain-28840b382/]
 - **Last Updated:** July 2026
 
 ---
